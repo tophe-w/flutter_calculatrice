@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_102_calculatrice/common/widgets/custom_button.dart';
+import 'package:flutter_102_calculatrice/config/calculs_globals.dart';
 import 'package:provider/provider.dart';
 
 import '../models/calculation_historique.dart';
@@ -23,8 +24,10 @@ class _SoustractionPageState extends State<SoustractionPage> {
       int num2 = int.parse(_controller2.text);
       result = num1 - num2;
 
-      final history = Provider.of<CalculationHistory>(context, listen: false);
-      history.addSoustraction("$num1 - $num2 = $result");
+      // final history = Provider.of<CalculationHistory>(context, listen: false);
+      // history.addSoustraction("$num1 - $num2 = $result");
+
+      soustractionHistory.add("$num1 - $num2 = $result");
     });
   }
 

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_102_calculatrice/config/calculs_globals.dart';
 import 'package:flutter_102_calculatrice/models/calculation_historique.dart';
 import 'package:provider/provider.dart';
 
@@ -18,10 +19,10 @@ class HistoriquePage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            _buildSection('Addition', history.addition),
-            _buildSection('Soustraction', history.soustraction),
-            _buildSection('Multiplication', history.multiplication),
-            _buildSection('Division', history.division),
+            _buildSection('Addition', additionHistory),
+            _buildSection('Soustraction', soustractionHistory),
+            _buildSection('Multiplication', multiplicationHistory),
+            _buildSection('Division', divisionHistory),
           ],
         ),
       ),
@@ -29,28 +30,30 @@ class HistoriquePage extends StatelessWidget {
   }
 
   Widget _buildSection(String title, List<String> items) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Text(
-            title,
-            style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+    return SingleChildScrollView(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text(
+              title,
+              style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
           ),
-        ),
-        ListView.builder(
-          shrinkWrap: true,
-          physics:
-              const NeverScrollableScrollPhysics(), // Empêche la ListView de scroller
-          itemCount: items.length,
-          itemBuilder: (context, index) {
-            return ListTile(
-              title: Text(items[index]),
-            );
-          },
-        ),
-      ],
+          ListView.builder(
+            shrinkWrap: true,
+            physics:
+                NeverScrollableScrollPhysics(), // Ajout pour éviter le conflit de défilement
+            itemCount: items.length,
+            itemBuilder: (context, index) {
+              return ListTile(
+                title: Text(items[index]),
+              );
+            },
+          ),
+        ],
+      ),
     );
   }
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_102_calculatrice/common/widgets/custom_button.dart';
+import 'package:flutter_102_calculatrice/config/calculs_globals.dart';
 import 'package:flutter_102_calculatrice/models/calculation_historique.dart';
 import 'package:provider/provider.dart';
 
@@ -22,8 +23,9 @@ class _DivisionPageState extends State<DivisionPage> {
       double num2 = double.parse(_controller2.text.replaceAll(',', '.'));
       result = double.parse((num1 / num2).toStringAsFixed(4));
 
-      final history = Provider.of<CalculationHistory>(context, listen: false);
-      history.addDivision("$num1 / $num2 = $result");
+      // final history = Provider.of<CalculationHistory>(context, listen: false);
+      // history.addDivision("$num1 / $num2 = $result");
+      divisionHistory.add("$num1 / $num2 = $result");
     });
   }
 
