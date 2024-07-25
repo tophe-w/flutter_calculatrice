@@ -1,18 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:flutter_102_calculatrice/common/widgets/custom_button.dart';
+import 'package:flutter_102_calculatrice/models/calculation_historique.dart';
 import 'package:flutter_102_calculatrice/pages/addition_page.dart';
 import 'package:flutter_102_calculatrice/pages/animated_page.dart';
 import 'package:flutter_102_calculatrice/pages/division_page.dart';
+import 'package:flutter_102_calculatrice/pages/historique_page.dart';
 import 'package:flutter_102_calculatrice/pages/multiplication_page.dart';
 import 'package:flutter_102_calculatrice/pages/soustraction_page.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => CalculationHistory(),
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
+ 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -141,6 +149,21 @@ class _MyHomePageState extends State<MyHomePage> {
                   ],
                 ),
               ],
+            ),
+            const SizedBox(height: 50),
+            InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => HistoriquePage()),
+                );
+              },
+              child: const Text(
+                'Historique',
+                style: TextStyle(
+                  fontSize: 30,
+                ),
+              ),
             )
           ],
         ),
