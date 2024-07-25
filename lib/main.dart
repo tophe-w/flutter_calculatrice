@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_102_calculatrice/common/widgets/custom_button.dart';
 import 'package:flutter_102_calculatrice/pages/addition_page.dart';
+import 'package:flutter_102_calculatrice/pages/animated_page.dart';
 import 'package:flutter_102_calculatrice/pages/division_page.dart';
 import 'package:flutter_102_calculatrice/pages/multiplication_page.dart';
 import 'package:flutter_102_calculatrice/pages/soustraction_page.dart';
@@ -62,7 +63,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => AdditionPage()),
+                              builder: (context) => const AdditionPage()),
                         );
                       },
                       contenuDuBouton: '+',
@@ -91,8 +92,16 @@ class _MyHomePageState extends State<MyHomePage> {
               ],
             ),
             const SizedBox(height: 60),
-            Image.asset('lib/assets/images/image_calculatrice1.png',
-                width: 200, height: 200),
+            InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const AnimatedPage()),
+                );
+              },
+              child: Image.asset('lib/assets/images/image_calculatrice.png',
+                  width: 230, height: 230),
+            ),
             const SizedBox(height: 60),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,

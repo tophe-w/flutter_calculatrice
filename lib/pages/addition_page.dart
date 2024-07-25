@@ -38,6 +38,8 @@ class _AdditionPageState extends State<AdditionPage> {
       backgroundColor: const Color.fromARGB(255, 245, 245, 245),
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        title: const Text('Addition Page'),
+        centerTitle: true,
       ),
       body: Container(
         padding: const EdgeInsets.all(26.0),
