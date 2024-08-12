@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_102_calculatrice/config/calculs_globals.dart';
-import 'package:flutter_102_calculatrice/models/calculation_historique.dart';
-import 'package:provider/provider.dart';
+// import 'package:flutter_102_calculatrice/models/calculation_historique.dart';
+// import 'package:provider/provider.dart';
 
 class HistoriquePage extends StatelessWidget {
   const HistoriquePage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final history = Provider.of<CalculationHistory>(context);
+    // final history = Provider.of<CalculationHistory>(context);
 
     return Scaffold(
       appBar: AppBar(
@@ -44,7 +44,7 @@ class HistoriquePage extends StatelessWidget {
           ListView.builder(
             shrinkWrap: true,
             physics:
-                NeverScrollableScrollPhysics(), // Ajout pour éviter le conflit de défilement
+                const NeverScrollableScrollPhysics(), // Ajout pour éviter le conflit de défilement
             itemCount: items.length,
             itemBuilder: (context, index) {
               return ListTile(

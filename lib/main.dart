@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+// import 'package:provider/provider.dart';
 import 'package:flutter_102_calculatrice/common/widgets/custom_button.dart';
-import 'package:flutter_102_calculatrice/models/calculation_historique.dart';
+// import 'package:flutter_102_calculatrice/models/calculation_historique.dart';
 import 'package:flutter_102_calculatrice/pages/addition_page.dart';
 import 'package:flutter_102_calculatrice/pages/animated_page.dart';
 import 'package:flutter_102_calculatrice/pages/division_page.dart';
@@ -9,13 +9,17 @@ import 'package:flutter_102_calculatrice/pages/historique_page.dart';
 import 'package:flutter_102_calculatrice/pages/multiplication_page.dart';
 import 'package:flutter_102_calculatrice/pages/soustraction_page.dart';
 
+// void main() {
+//   runApp(
+//     ChangeNotifierProvider(
+//       create: (context) => CalculationHistory(),
+//       child: const MyApp(),
+//     ),
+//   );
+// }
+
 void main() {
-  runApp(
-    ChangeNotifierProvider(
-      create: (context) => CalculationHistory(),
-      child: const MyApp(),
-    ),
-  );
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -155,7 +159,7 @@ class _MyHomePageState extends State<MyHomePage> {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => HistoriquePage()),
+                  MaterialPageRoute(builder: (context) => const HistoriquePage()),
                 );
               },
               child: const Text(

@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_102_calculatrice/common/widgets/custom_button.dart';
 import 'package:flutter_102_calculatrice/config/calculs_globals.dart';
-import 'package:flutter_102_calculatrice/models/calculation_historique.dart';
-import 'package:provider/provider.dart';
+// import 'package:flutter_102_calculatrice/models/calculation_historique.dart';
+// import 'package:provider/provider.dart';
 
 class AdditionPage extends StatefulWidget {
   const AdditionPage({super.key});
@@ -19,8 +19,8 @@ class _AdditionPageState extends State<AdditionPage> {
 
   void addNumbers() {
     setState(() {
-      int num1 = int.parse(_controller1.text);
-      int num2 = int.parse(_controller2.text);
+      int num1 = int.tryParse(_controller1.text) ?? 0;
+      int num2 = int.tryParse(_controller2.text) ?? 0;
       result = num1 + num2;
 
       // final history = Provider.of<CalculationHistory>(context, listen: false);
