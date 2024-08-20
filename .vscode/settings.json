@@ -1,3 +1,17 @@
 {
-  "cSpell.words": ["ARGB", "vsync"]
+  "cSpell.words": [
+    "ARGB",
+    "childrens",
+    "Duolingo",
+    "Gojek",
+    "grey",
+    "haltere",
+    "Ramah",
+    "RGBO",
+    "roboto",
+    "Roboto",
+    "tete",
+    "vsync"
+  ],
+  "java.compile.nullAnalysis.mode": "automatic"
 }

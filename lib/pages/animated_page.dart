@@ -16,7 +16,7 @@ class _AnimatedPageState extends State<AnimatedPage>
   void initState() {
     super.initState();
     _controller = AnimationController(
-      duration: const Duration(seconds: 1),
+      duration: const Duration(seconds: 4),
       vsync: this,
     );
 
