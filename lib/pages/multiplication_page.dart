@@ -41,6 +41,7 @@ class _MultiplicationPageState extends State<MultiplicationPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        toolbarHeight: 120.0,
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: const Text('Multiplication Page'),
         centerTitle: true,

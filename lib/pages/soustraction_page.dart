@@ -42,6 +42,7 @@ class _SoustractionPageState extends State<SoustractionPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        toolbarHeight: 120.0,
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: const Text('Soustraction Page'),
         centerTitle: true,

@@ -1,19 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_102_calculatrice/config/friends_provider.dart';
 // import 'package:provider/provider.dart';
 // import 'package:flutter_102_calculatrice/models/calculation_historique.dart';
 import 'package:flutter_102_calculatrice/pages/home_page.dart';
-
-// void main() {
-//   runApp(
-//     ChangeNotifierProvider(
-//       create: (context) => CalculationHistory(),
-//       child: const MyApp(),
-//     ),
-//   );
-// }
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => FriendsProvider(),
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {

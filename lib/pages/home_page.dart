@@ -67,18 +67,16 @@ class _HomePageState extends State<HomePage> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Row(children: [
-                            Text(
-                              "1er exercice: Calculatrice,",
-                              style: TextStyle(
-                                  fontSize: 20,
-                                  decoration: TextDecoration.underline),
-                            ),
-                            Text(
-                              "(Lien sur la BottomBar)",
-                              style: TextStyle(fontSize: 12),
-                            ),
-                          ]),
+                          Text(
+                            "1er exercice: Calculatrice,",
+                            style: TextStyle(
+                                fontSize: 20,
+                                decoration: TextDecoration.underline),
+                          ),
+                          Text(
+                            "(Lien sur la BottomBar)",
+                            style: TextStyle(fontSize: 12),
+                          ),
                           Text(
                               "Le premier Exercice consiste à créer une calculatrice avec les consignes suivantes : Reprendre à 0 une application."),
                           Text(

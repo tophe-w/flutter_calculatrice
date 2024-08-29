@@ -20,6 +20,7 @@ class _CalculatePageState extends State<CalculatePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        toolbarHeight: 120.0,
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: const Text("Exercice Calculatrice"),
         centerTitle: true,

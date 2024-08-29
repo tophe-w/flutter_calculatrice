@@ -1,43 +1,61 @@
 import 'package:flutter/material.dart';
 
 class CustomOverview extends StatelessWidget {
-  final IconData icon;
+  final Image image;
   final String name;
   final String texte;
   final double iconSize;
-  final double width;
-  final double height;
 
   const CustomOverview({
     super.key,
-    required this.icon,
+    required this.image,
     required this.name,
     required this.texte,
-    this.iconSize = 24.0,
-    this.width = 200,
-    this.height = 100,
+    this.iconSize = 26.0,
   });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: width,
-      height: height,
       decoration: BoxDecoration(
         border: Border.all(color: Colors.grey),
         borderRadius: BorderRadius.circular(15.0),
       ),
-      child: Column(
-        children: [
-          Row(
-            children: [
-              Icon(icon),
-              SizedBox(width: 8),
-              Text(name),
-            ],
-          ),
-          Text(texte)
-        ],
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              children: [
+                SizedBox(width: 30, height: 30, child: image),
+                SizedBox(width: 2),
+                Text(
+                  name,
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    fontFamily: "Roboto",
+                  ),
+                ),
+              ],
+            ),
+            Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 33.0),
+                  child: Text(
+                    texte,
+                    style: TextStyle(
+                        fontFamily: "Roboto",
+                        color: Color.fromARGB(255, 146, 146, 146),
+                        fontSize: 15),
+                  ),
+                )
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }

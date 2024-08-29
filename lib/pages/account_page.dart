@@ -64,7 +64,7 @@ class _AccountPageState extends State<AccountPage> {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(height: 30),
+              SizedBox(height: 10),
               const Text(
                 'Welcome TO Gojek!',
                 style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),

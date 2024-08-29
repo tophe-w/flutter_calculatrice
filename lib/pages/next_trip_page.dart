@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_102_calculatrice/pages/account_page.dart';
 import 'package:flutter_102_calculatrice/pages/animated_page.dart';
 import 'package:flutter_102_calculatrice/pages/home_page.dart';
-import 'package:flutter_102_calculatrice/pages/duolingo_page.dart';
+import 'package:flutter_102_calculatrice/features/profil/presentations/pages/duolingo_page.dart';
 
 class NextTripPage extends StatefulWidget {
   const NextTripPage({super.key});
@@ -118,7 +118,7 @@ class _NextTripPageState extends State<NextTripPage> {
                                         fontWeight: FontWeight.w700),
                                   ),
                                   SizedBox(
-                                    width: 40,
+                                    width: 20,
                                   ),
                                   Icon(
                                     Icons.arrow_forward_ios_rounded,

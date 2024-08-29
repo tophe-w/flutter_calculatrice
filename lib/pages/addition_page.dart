@@ -43,6 +43,7 @@ class _AdditionPageState extends State<AdditionPage> {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 245, 245, 245),
       appBar: AppBar(
+        toolbarHeight: 120.0,
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: const Text('Addition Page'),
         centerTitle: true,
